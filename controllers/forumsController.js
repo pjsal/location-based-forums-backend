@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const User = require('../models/user.js');
-const Forum = require('../models/forumAndPosts.js').Forum;  
-const Post = require('../models/forumAndPosts.js').Post;  
+const Forum = require('../models/forumAndPost.js').Forum;  
+const Post = require('../models/forumAndPost.js').Post;  
 
 
 // THIS CAN EVENTUALLY BE DELETED ONCE I FIGURE OUT HOW TO RETURN ONLY ONES WITHIN RANGE

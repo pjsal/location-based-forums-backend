@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Forum = require('./forumAndPosts.js');
+const Forum = require('./forumAndPost.js');
 
 const userSchema = new mongoose.Schema({
     userName: {
