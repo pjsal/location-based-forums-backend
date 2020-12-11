@@ -43,6 +43,7 @@ app.use('/users', require('./controllers/usersController.js'));
 app.use('/forums', require('./controllers/forumsController'));
 // Seed Category collection
 app.use('/seed', require('./seeds/seedDB.js'));
+app.use('/clear', require('./seeds/clearCollections.js'));
 
 
 app.listen(PORT, () => console.log( 'Listening on port:', PORT));

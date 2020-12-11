@@ -78,36 +78,42 @@ router.get('/seedDB', async (req, res) => {
   const user1 = new User({
     userName: 'FootBallBoy',
     password: pwd,
+    deviceToken: null,
     forums: [],
   });
 
   const user2 = new User({
     userName: 'FanMan123',
     password: pwd,
+    deviceToken: null,
     forums: [],
   });
 
   const user10 = new User({
     userName: 'Funtime321',
     password: pwd,
+    deviceToken: null,
     forums: [],
   });
 
   const user11 = new User({
     userName: 'BandTime',
     password: pwd,
+    deviceToken: null,
     forums: [],
   });
 
   const user12 = new User({
     userName: 'Qwert',
     password: pwd,
+    deviceToken: null,
     forums: [],
   });
 
   const user13 = new User({
     userName: 'HowYouDoin',
     password: pwd,
+    deviceToken: null,
     forums: [],
   });
 
