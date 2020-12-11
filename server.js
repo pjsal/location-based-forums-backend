@@ -40,9 +40,9 @@ app.use(express.json());
 // Define path for user routes and link to control file
 app.use('/users', require('./controllers/usersController.js'));
 // Define path for forum routes and link to control file
-app.use('/forums', require('./controllers/forumController'));
+app.use('/forums', require('./controllers/forumsController'));
 // Seed Category collection
-app.use('/seed', require('./seeds/seedDB.js'));
+// app.use('/seed', require('./seeds/seedDB.js'));
 
 
 app.listen(PORT, () => console.log( 'Listening on port:', PORT));
