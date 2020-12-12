@@ -41,8 +41,9 @@ app.use(express.json());
 app.use('/users', require('./controllers/usersController.js'));
 // Define path for forum routes and link to control file
 app.use('/forums', require('./controllers/forumsController'));
-// Seed Category collection
+// Seed DB 
 app.use('/seed', require('./seeds/seedDB.js'));
+// Clear all collections
 app.use('/clear', require('./seeds/clearCollections.js'));
 
 
