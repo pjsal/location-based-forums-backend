@@ -55,7 +55,7 @@ router.get('/seedDB', async (req, res) => {
 
   const forumWellsFargoCenter = await Forum.create({
     identNum: 3,
-    name: 'Flyers Game',
+    name: '76s Game',
     latitude: 39.90124993847163,  
     longitude: -75.17204076074462,
     users: [],

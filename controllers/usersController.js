@@ -16,6 +16,24 @@ router.get('/api/users', (req, res) => {
 });
 
 
+// ROUTE - Get user by id and password (i.e, login)
+router.get('/api/users/:userName/:password', (req, res) => {
+    console.log('req.params: ', req.params);
+    User.findOne( 
+      { userName: req.params.userName, 
+        password: req.params.password 
+      })
+    // If successful return JSON as we will need the user's id from the DB
+    .then((user) => {
+      res.status(200).json({ user: user });
+    })
+    // Otherwise, return error
+    .catch((error) => {
+      res.status(500).json({ error: error });
+    });
+});
+
+
 // POST (create new user)
 router.post('/api/users', (req, res) => {
     // console.log('req.body: ', req.body);
