@@ -41,8 +41,8 @@ router.post('/api/users', (req, res) => {
     User.create(req.body)
     // If successful, respond with 201
     .then((newUser) => {
-      // res.status(201).json({ user: newUser });
-      res.status(201).end();
+      res.status(201).json({ user: newUser });
+      // res.status(201).end();
     })
     // Otherwise, return error
     .catch((error) => {
