@@ -37,9 +37,18 @@ router.get('/seedDB', async (req, res) => {
   // Create Forums
   const forumLinFinField = await Forum.create({
     identNum: 1,
-    name: 'Cowboys vs Eagles',
-    latitude: 39.90092067041356,
-    longitude: -75.16741264464645,
+    name: 'Cowboys Fans',
+    latitude: 39.900591442482494, 
+    longitude: -75.16813147666544,
+    users: [],
+    posts: [],
+  });
+
+  const forumLinFinFieldEagles = await Forum.create({
+    identNum: 1,
+    name: 'Eagles Fans',
+    latitude: 39.90126635803006,  
+    longitude: -75.16671527038092,
     users: [],
     posts: [],
   });
