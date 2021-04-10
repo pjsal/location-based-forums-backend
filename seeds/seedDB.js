@@ -35,51 +35,100 @@ router.get('/seedDB', async (req, res) => {
 
   
   // Create Forums
+  // const forumLinFinField = await Forum.create({
+  //   identNum: 1,
+  //   name: 'Cowboys Fans',
+  //   latitude: 39.900591442482494, 
+  //   longitude: -75.16813147666544,
+  //   users: [],
+  //   posts: [],
+  // });
+
+  // const forumLinFinFieldEagles = await Forum.create({
+  //   identNum: 1,
+  //   name: 'Eagles Fans',
+  //   latitude: 39.90126635803006,  
+  //   longitude: -75.16671527038092,
+  //   users: [],
+  //   posts: [],
+  // });
+  
+  // const forumXfinityLive = await Forum.create({
+  //   identNum: 2,
+  //   name: 'DMB Tribute',
+  //   latitude: 39.904310859720624, 
+  //   longitude: -75.16952446714895,
+  //   users: [],
+  //   posts: [],
+  // });
+
+  // const forumWellsFargoCenter = await Forum.create({
+  //   identNum: 3,
+  //   name: '76ers Game',
+  //   latitude: 39.90124993847163,  
+  //   longitude: -75.17204076074462,
+  //   users: [],
+  //   posts: [],
+  // });
+
+  // const forumCitizensBankPark = await Forum.create({
+  //   identNum: 4,
+  //   name: 'Phillies Game',
+  //   latitude: 39.90617240019453,  
+  //   longitude: -75.16651666000737,
+  //   users: [],
+  //   posts: [],
+  // });
+  
+
   const forumLinFinField = await Forum.create({
     identNum: 1,
-    name: 'Cowboys Fans',
-    latitude: 39.900591442482494, 
-    longitude: -75.16813147666544,
-    users: [],
+    name: 'House 1',
+    latitude: 41.52313808456833, 
+    longitude: -75.66818245875271,
+    members: [],
     posts: [],
   });
 
   const forumLinFinFieldEagles = await Forum.create({
-    identNum: 1,
-    name: 'Eagles Fans',
-    latitude: 39.90126635803006,  
-    longitude: -75.16671527038092,
-    users: [],
+    identNum: 2,
+    name: 'House 2',
+    latitude: 41.522282660548264,  
+    longitude: -75.6685747370755,
+    members: [],
     posts: [],
   });
   
   const forumXfinityLive = await Forum.create({
-    identNum: 2,
-    name: 'DMB Tribute',
-    latitude: 39.904310859720624, 
-    longitude: -75.16952446714895,
-    users: [],
+    identNum: 3,
+    name: 'House 3',
+    latitude: 41.52228863958512, 
+    longitude: -75.6677623231985,
+    members: [],
     posts: [],
   });
 
   const forumWellsFargoCenter = await Forum.create({
-    identNum: 3,
-    name: '76ers Game',
-    latitude: 39.90124993847163,  
-    longitude: -75.17204076074462,
-    users: [],
+    identNum: 4,
+    name: 'Townie',
+    latitude: 41.52253258148575,  
+    longitude: -75.66762744396024,
+    members: [],
     posts: [],
   });
 
   const forumCitizensBankPark = await Forum.create({
-    identNum: 4,
-    name: 'Phillies Game',
-    latitude: 39.90617240019453,  
-    longitude: -75.16651666000737,
-    users: [],
+    identNum: 5,
+    name: 'Townie 2',
+    latitude: 41.52275854830476,  
+    longitude: -75.6702567774194,
+    members: [],
     posts: [],
   });
   
+
+
+
 
   // Create Users
   let pwd = '123';
@@ -174,8 +223,8 @@ router.get('/seedDB', async (req, res) => {
 
 
   // Push some users and posts into the forumLinFinField forum
-  forumLinFinField.users.push(user1);
-  forumLinFinField.users.push(user2);
+  forumLinFinField.members.push(user1);
+  forumLinFinField.members.push(user2);
   forumLinFinField.posts.push(post1);
   forumLinFinField.posts.push(post2);
   forumLinFinField.posts.push(post3);
@@ -188,10 +237,10 @@ router.get('/seedDB', async (req, res) => {
   });
 
   // Push some users and posts into the forumXfinityLive forum
-  forumXfinityLive.users.push(user10);
-  forumXfinityLive.users.push(user11);
-  forumXfinityLive.users.push(user12);
-  forumXfinityLive.users.push(user13);
+  forumXfinityLive.members.push(user10);
+  forumXfinityLive.members.push(user11);
+  forumXfinityLive.members.push(user12);
+  forumXfinityLive.members.push(user13);
   forumXfinityLive.posts.push(post10);
   forumXfinityLive.posts.push(post11);
   forumXfinityLive.posts.push(post12);

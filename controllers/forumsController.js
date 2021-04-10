@@ -10,7 +10,7 @@ router.get('/api/forums', (req, res) => {
     Forum.find()
     // Return all Forums as an Array
     .then((allForums) => {
-      res.status(200).json({ forum: allForums });
+      res.status(200).json({ responseData: allForums });
     })
     // Otherwise, return error
     .catch((error) => {
@@ -133,7 +133,7 @@ router.post('/api/forums/:forumId/posts', (req, res) => {
 
 
 // PUT (add user to forum)
-router.put('/api/forums/:forumId/users/:userId', (req, res) => {
+router.put('/api/forums/:forumId/members/:userId', (req, res) => {
   console.log('req.body: ', req.body);
   console.log('req.params: ', req.params);  
 
@@ -141,7 +141,7 @@ router.put('/api/forums/:forumId/users/:userId', (req, res) => {
   Forum.findByIdAndUpdate(req.params.forumId,
     {
       $push: {
-        users: req.params.userId,
+        members: req.params.userId,
       },
     },
     { new: true, upsert: true }

@@ -23,7 +23,7 @@ const forumSchema = new mongoose.Schema({
     longitude: {
       type: Number,
     },
-    users: [
+    members: [
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
